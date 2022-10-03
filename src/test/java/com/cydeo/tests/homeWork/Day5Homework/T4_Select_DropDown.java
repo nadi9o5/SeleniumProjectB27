@@ -15,14 +15,14 @@ public class T4_Select_DropDown {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUpMethod(){
+    public void setUp(){
         driver= WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @Test
-    public void dropDown() throws InterruptedException {
+    public void myTest1() throws InterruptedException {
 
         driver.get("http://practice.cybertekschool.com/dropdown  ");
         Select dropDownState=new Select(driver.findElement(By.xpath("//select[@id='state']")));
@@ -33,8 +33,8 @@ public class T4_Select_DropDown {
 
         //   Verify final selected option is California. Use all Select options. (visible text, value, index)
 
-        dropDownState.selectByVisibleText("California");
-       // dropDownState.selectByIndex(5);
+       // dropDownState.selectByVisibleText("California");
+       dropDownState.selectByIndex(5);
        // dropDownState.selectByValue("CA");
 
         String actual=dropDownState.getFirstSelectedOption().getText();
