@@ -1,5 +1,6 @@
 package com.cydeo.tests.day7_windows_Webtables;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -58,9 +59,10 @@ public class MultipleWindowsPractice {
 
 
         //    7. Assert: Title is “Cydeo”
-        actualTitle=driver.getTitle();
-        expectedTitle="Cydeo";
-        Assert.assertEquals(actualTitle,expectedTitle);
+    //    actualTitle=driver.getTitle();
+     //   expectedTitle="Cydeo";
+     //  Assert.assertEquals(actualTitle,expectedTitle);
+        BrowserUtils.verifyTitle(driver,"Cydeo");
 
 
     }
