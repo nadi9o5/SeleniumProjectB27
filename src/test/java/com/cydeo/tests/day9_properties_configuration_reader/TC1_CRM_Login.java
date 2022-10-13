@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class TC1_LoginScenario extends TestBase {
+public class TC1_CRM_Login extends TestBase {
 //1. Create new test and make set ups
 //2. Go to : http://login1.nextbasecrm.com/
 //3. Enter valid username
